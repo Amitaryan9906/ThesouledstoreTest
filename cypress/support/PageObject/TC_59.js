@@ -6,7 +6,7 @@ class Tc_059 {
       cy.wait(5000);
       cy.get("#moe-dontallow_button").click();
       cy.xpath("(//img[@id='vests'])[1]").click();
-      // cy.screenshot();
+      cy.screenshot();
     }
   
    

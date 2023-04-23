@@ -1,20 +1,13 @@
 /// <reference types="Cypress" />
 
 class Tc_064 {
-    visit() {
+    filterByProduct() {
       cy.visit('https://www.thesouledstore.com/men/t-shirts');
       cy.wait(5000);
-    }
-  
-    selectDropdownOption() {
-      cy.get('#headingOne').click();
-      
-    }
-  
-    filterByProduct(filterText) {
-        cy.get("//*[@class='form-control input-sm filter-search'][1]").contains(filterText).click();
-        cy.get('#apply_filter').should('have.class', 'checked')
-    }
+      cy.get("#moe-dontallow_button").click();
+      cy.xpath("(//a[normalize-space()='Products'])[1]").click();
+      cy.xpath("(//input[@type='checkbox'])[1]").check({force: true});
+  }
   }
   
   export default Tc_064;
