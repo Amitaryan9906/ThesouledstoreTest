@@ -4,8 +4,8 @@ class Tc_059 {
     visit() {
       cy.visit('https://www.thesouledstore.com/men');
       cy.wait(5000);
-      cy.get("#moe-dontallow_button").click();
-      cy.xpath("(//img[@id='vests'])[1]").click();
+      // cy.get("#moe-dontallow_button").click();
+      cy.xpath("(//img[@alt='T-shirts'])[1]").click();
       cy.screenshot();
     }
   
